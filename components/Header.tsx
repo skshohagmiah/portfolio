@@ -39,7 +39,7 @@ export default function Header() {
           />
           <div>
             <h2 className="text-blue-400 text-lg">Shohag Miah</h2>
-            <small className="-mt-1 block">Web developer</small>
+            <small className="-mt-1 block text-gray-300">Web developer</small>
           </div>
         </Link>
         <nav className="hidden md:flex space-x-8 text-gray-300">

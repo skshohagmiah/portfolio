@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-cover bg-center mt-4" style={{ backgroundImage: "url('/path-to-your-background-image.jpg')" }}>
+    <section className="relative h-screen flex items-center justify-center bg-cover bg-center mt-8 md:mt-0" style={{ backgroundImage: "url('/path-to-your-background-image.jpg')" }}>
       <div className="container relative z-10 mx-auto text-center text-white px-4 md:px-8">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-4">Hi, I&apos;m <span className="text-blue-400">Shohag Miah</span></h1>
         <p className="text-lg md:text-2xl lg:text-3xl mb-4">A Passionate <span className="text-green-400">Web Developer</span> and Learner</p>
