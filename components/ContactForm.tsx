@@ -54,7 +54,7 @@ const ContactForm = () => {
   return (
     <div id='contact' ref={ref} className="scroll-mt-8 min-h-screen flex items-center justify-center bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-16">
-        <div className="bg-gray-800 rounded-lg shadow-lg p-8 md:flex md:space-x-8">
+        <div className="bg-gray-800 rounded-lg shadow-lg p-4 md:p-8 md:flex md:space-x-8">
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold text-blue-400 mb-4">Contact Me</h2>
             <p className="text-lg text-gray-400 mb-6">

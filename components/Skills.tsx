@@ -33,7 +33,7 @@ export function Skills() {
     >
       <BackgroundBeams className="z-0" />
       <div className="container mx-auto px-4 z-10">
-        <div className="pb-8 text-center">
+        <div className="pb-4 text-center">
           <h2 className="text-3xl font-bold text-blue-400 py-2 border-b-4 border-lime-400 rounded-b-xl inline-block">
             My Skills
           </h2>

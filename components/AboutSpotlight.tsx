@@ -17,7 +17,7 @@ export function AboutSpotlight() {
   }, [setActiveSection, inView]);
 
   return (
-    <div id="about" ref={ref} className="scroll-mt-8 md:h-[40rem] w-full rounded-md py-16 md:p-0 bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+    <div id="about" ref={ref} className="scroll-mt-8 w-full rounded-md py-16  bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <BackgroundBeams className="z-0" />
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
@@ -30,7 +30,7 @@ export function AboutSpotlight() {
           </h2>
         </div>
         <div className="container mx-auto text-start">
-          <div className="max-w-7xl mx-auto md:grid grid-cols-2 gap-12 items-start">
+          <div className="max-w-7xl mx-auto lg:grid grid-cols-2 gap-12 items-start">
             <div className="space-y-6 text-lg">
               <div className="flex items-start">
                 <span className="flex-shrink-0 rounded-full bg-slate-600 text-xl font-semibold w-8 h-8 flex items-center justify-center mr-4">1</span>
