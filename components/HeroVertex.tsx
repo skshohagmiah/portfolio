@@ -1,12 +1,24 @@
 'use client';
-import React from "react";
+import React, { useEffect } from "react";
 import { Vortex } from "./ui/vortex";
 import Hero from "./Here";
 import Header from "./Header";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/context/ActionSectionContext";
 
 export function HeroVertex() {
+
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("/");
+    }
+  }, [setActiveSection, inView]);
+
   return (
-    <div className=" mx-auto rounded-md  h-screen overflow-hidden">
+    <div ref={ref} className=" mx-auto rounded-md  h-screen overflow-hidden">
       <Vortex
         backgroundColor="black"
         rangeY={550}

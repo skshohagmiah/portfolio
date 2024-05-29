@@ -1,47 +1,63 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-cart";
 import Link from "next/link";
+import { useActiveSection } from "@/context/ActionSectionContext";
+import { useInView } from "react-intersection-observer";
 
 export function ThreeDCardDemo() {
+
+  const { ref, inView } = useInView({ threshold: 0.5 });
+  const { setActiveSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("projects");
+    }
+  }, [setActiveSection, inView]);
+
   const projectItems = [
     {
-      name: "TechBazer - Next 14 Electronics Ecommerce Website",
+      name: "TechBazer - Next Js Electronics Ecommerce Website",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi quod voluptates culpa aliquid. Eius beatae illo repellat facere accusamus ratione ipsum quibusdam voluptatem cupiditate error, blanditiis nulla minus doloribus? Unde.",
+        "This is an E-commerce website build with next js, tailwindcss and shadcn ui, this is a mainly frontend focus application. I have developed more than 20+ pages with dashboard and form with proper validation using react-hook-form and zod. ",
       image: "/images/techbazer.png",
       github: "https://github.com/skshohagmiah/techBazer",
       live: "https://tech-bazer-skshohagmiahs-projects.vercel.app/",
       className: "col-span-2",
     },
     {
-      name: "StayHub - Next 14, Prisma, Taiwindcss Hotel Reservation System",
+      name: "StayHub - Next Js Hotel Reservation System",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi quod voluptates culpa aliquid. Eius beatae illo repellat facere accusamus ratione ipsum quibusdam voluptatem cupiditate error, blanditiis nulla minus doloribus? Unde.",
+        "This is a Property booking application like airbnb. I build this with next js 14, tailwindcss, prisma, authjs, mongodb, uploadthing and others. This app has all necessary features like property listing, property booking, wishlist management and others",
       image: "/images/stayhub.png",
       github: "https://github.com/skshohagmiah/stayhub",
       live: "https://stayhub-rose.vercel.app/",
       className: "col-span-1",
     },
     {
-      name: "Teamify - Next 14 Team Collaboration App ",
+      name: "Teamify - Next Js Team Collaboration App ",
       description:
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi quod voluptates culpa aliquid. Eius beatae illo repellat facere accusamus ratione ipsum quibusdam voluptatem cupiditate error, blanditiis nulla minus doloribus? Unde.",
-      image: "/images/team.png",
+        "This is a remote team collaboration tool build with next js, prisma, node js, express js, socket.io and other tools. In this app user can aassign and manage task, can do realtime calling and messaging and also multiplayer drawing and many more.",
+      image: "/images/teamify.png",
       className: "md:col-span-1",
       github: "https://github.com/skshohagmiah/teamifys",
       live: "https://teamify-tau.vercel.app/",
     },
   ];
 
+
+
   return (
-    <>
-      <div className="text-3xl font-bold text-center text-blue-400 py-2 mt-8 border-b-4 border-lime-400 rounded-b-xl w-fit mx-auto">Some Of My Products</div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start max-w-7xl mx-auto -pt-4">
+    <div ref={ref} id="projects" className="bg-gray-800 py-16 scroll-mt-8">
+      <div className="text-3xl font-bold text-center text-blue-400 py-2  border-b-4 border-lime-400 rounded-b-xl w-fit mx-auto">
+        Some Of My Projects
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start max-w-7xl mt-12 md:mt-0 mx-auto">
         {projectItems.map((item) => (
-          <CardContainer key={item.name} className="inter-var w-full !py-0">
+          <CardContainer key={item.name} className="inter-var w-full">
             <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  ">
               <CardItem
                 translateZ="50"
@@ -88,6 +104,6 @@ export function ThreeDCardDemo() {
           </CardContainer>
         ))}
       </div>
-    </>
+    </div>
   );
 }

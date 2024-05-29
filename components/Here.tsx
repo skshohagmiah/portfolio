@@ -12,36 +12,36 @@ export default function Hero() {
           I specialize in creating <span className="">beautiful</span>, <span className="">responsive</span>, and <span className="">user-friendly</span> websites. Let&apos;s work together to build something amazing that stands out in the digital world.
         </p>
         <div className="space-x-4 flex flex-col md:flex-row justify-center items-center">
-          <Link href="/about">
+          <Link href="#about">
             <button className="mb-4 md:mb-0 inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300">
               Learn More About Me
             </button>
           </Link>
-          <Link href="/contact">
+          <Link href="#contact">
             <button className="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300">
               Get in Touch
             </button>
           </Link>
         </div>
         <div className="mt-8 flex justify-center space-x-6">
-          <Link href="https://github.com/your-profile" passHref>
+          <Link href="https://github.com/skshohagmiah" passHref>
             <div className="cursor-pointer text-gray-300 hover:text-white transition duration-300">
               <FaGithub size={30} />
             </div>
           </Link>
-          <Link href="https://linkedin.com/in/your-profile" passHref>
+          <Link href="https://www.linkedin.com/in/shohag-miah-9483802a7/" passHref>
             <div className="cursor-pointer text-gray-300 hover:text-white transition duration-300">
               <FaLinkedin size={30} />
             </div>
           </Link>
-          <Link href="https://twitter.com/your-profile" passHref>
+          <Link href="https://x.com/shohagmiah84832" passHref>
             <div className="cursor-pointer text-gray-300 hover:text-white transition duration-300">
               <FaTwitter size={30} />
             </div>
           </Link>
         </div>
       </div>
-        <div className="absolute bottom-40 md:bottom-10 left-1/2 transform -translate-x-1/2 text-gray-300 mt-8">
+        <div className="absolute bottom-40 md:bottom-10 left-1/2 transform -translate-x-1/2 text-gray-300 hidden md:block mt-8">
           <a href="#about" className="flex flex-col items-center">
             <span className="animate-bounce p-2">↓</span>
             <span className="">Scroll Down</span>

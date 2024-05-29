@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-margin-top: 4rem;
+  scroll-snap-type: mandatory;
+}
