@@ -13,7 +13,7 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener("scroll", (e) => {
-      if (window.scrollY >= 80) {
+      if (window.scrollY >= 40) {
         setScrollToggle(true);
       } else {
         setScrollToggle(false);
@@ -94,7 +94,7 @@ export default function Header() {
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-whites focus:outline-none focus:text-whites"
+            className="text-white focus:outline-none focus:text-white"
           >
             <BiMenu size={30} />
           </button>

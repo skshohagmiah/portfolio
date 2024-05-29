@@ -17,7 +17,7 @@ export function AboutSpotlight() {
   }, [setActiveSection, inView]);
 
   return (
-    <div id="about" ref={ref} className="scroll-mt-8 w-full rounded-md py-16  bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+    <div id="about" ref={ref} className="scroll-mt-8 w-full rounded-md py-16  bg-neutral-950 text-white relative flex flex-col items-center justify-center antialiased">
       <BackgroundBeams className="z-0" />
       <Spotlight
         className="-top-40 left-0 md:left-60 md:-top-20"
