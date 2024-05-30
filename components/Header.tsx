@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        " border-b-2 border-b-gray-600 shadow-md fixed top-0 left-0 right-0 z-[1000]",
+        " border-b-2 border-b-gray-600 shadow-md fixed top-0 left-0 right-0 z-[1000] overflow-hidden",
         scrollToggle && "bg-black "
       )}
     >

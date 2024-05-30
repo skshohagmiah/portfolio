@@ -8,7 +8,7 @@ export default function Home() {
 
 
   return (
-    <main className="scroll-smooth scroll-my-8 text-white">
+    <main className="scroll-smooth scroll-my-8 text-white overflow-x-hidden">
       <HeroVertex />
       <ThreeDCardDemo
       />
